@@ -1,8 +1,5 @@
 pipeline {                                    // 1  // Defines the start of the Jenkins pipeline block
-    agent any                                 // Specifies the pipeline can run on any available agent
-    environment {                             // 2  // Defines environment variables for the pipeline
-        PATH = "/opt/maven/bin:$PATH"         // Adds Maven's path to the system's PATH variable
-    }                                         // 2  // Ends the environment block
+    agent any                                 // Specifies the pipeline can run on any available agent                                        // 2  // Ends the environment block
     stages {                                  // 3  // Defines the stages block where multiple stages are declared
         stage('git clone') {                  // 4  // Creates a stage named 'git clone'
             steps {                           // 5  // Defines the steps that will be executed in this stage
